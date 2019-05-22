@@ -23,6 +23,8 @@
 		E31C85F32283E6020055A9B0 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31C85F22283E6020055A9B0 /* CustomError.swift */; };
 		E31C85F522874ADB0055A9B0 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31C85F422874ADB0055A9B0 /* RepositoryFactory.swift */; };
 		E31C85FC228CD27A0055A9B0 /* ComicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31C85FB228CD27A0055A9B0 /* ComicTableViewCell.swift */; };
+		E3B83B9E22949E36003BF0C4 /* AgendaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B83B9D22949E36003BF0C4 /* AgendaTableViewController.swift */; };
+		E3B83BA02294A191003BF0C4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B83B9F2294A191003BF0C4 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		E31C85F22283E6020055A9B0 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		E31C85F422874ADB0055A9B0 /* RepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
 		E31C85FB228CD27A0055A9B0 /* ComicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTableViewCell.swift; sourceTree = "<group>"; };
+		E3B83B9D22949E36003BF0C4 /* AgendaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTableViewController.swift; sourceTree = "<group>"; };
+		E3B83B9F2294A191003BF0C4 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,8 @@
 		E31C85F8228CC99D0055A9B0 /* MainBoard */ = {
 			isa = PBXGroup;
 			children = (
+				E3B83B9C22949DE5003BF0C4 /* Agenda */,
+				E3B83B9B22949D4D003BF0C4 /* Guest */,
 				E31C85FA228CCAA30055A9B0 /* ComicPage */,
 				E31C85CD2283D1160055A9B0 /* Main.storyboard */,
 			);
@@ -196,6 +202,22 @@
 				E31C85FB228CD27A0055A9B0 /* ComicTableViewCell.swift */,
 			);
 			path = ComicPage;
+			sourceTree = "<group>";
+		};
+		E3B83B9B22949D4D003BF0C4 /* Guest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Guest;
+			sourceTree = "<group>";
+		};
+		E3B83B9C22949DE5003BF0C4 /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				E3B83B9D22949E36003BF0C4 /* AgendaTableViewController.swift */,
+				E3B83B9F2294A191003BF0C4 /* TableViewCell.swift */,
+			);
+			path = Agenda;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +340,9 @@
 				E31C85E52283D9530055A9B0 /* AlamofireResult.swift in Sources */,
 				E31C85E92283DDE50055A9B0 /* MyAppAPI.swift in Sources */,
 				E31C85ED2283E1C60055A9B0 /* ComicModel.swift in Sources */,
+				E3B83BA02294A191003BF0C4 /* TableViewCell.swift in Sources */,
 				E31C85E32283D6330055A9B0 /* Resource.swift in Sources */,
+				E3B83B9E22949E36003BF0C4 /* AgendaTableViewController.swift in Sources */,
 				E31C85CC2283D1160055A9B0 /* ComicListViewController.swift in Sources */,
 				E31C85F522874ADB0055A9B0 /* RepositoryFactory.swift in Sources */,
 				E31C85CA2283D1160055A9B0 /* AppDelegate.swift in Sources */,

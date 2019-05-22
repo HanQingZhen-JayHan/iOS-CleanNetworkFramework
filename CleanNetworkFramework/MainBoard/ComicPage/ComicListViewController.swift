@@ -17,7 +17,8 @@ class ComicListViewController: UIViewController,UITableViewDataSource,UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "Commic List"
+
         //comicTableView.translatesAutoresizingMaskIntoConstraints = false
         comicTableView.delegate = self
         comicTableView.dataSource = self
