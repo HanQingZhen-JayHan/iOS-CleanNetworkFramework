@@ -168,29 +168,51 @@
             </objects>
             <point key="canvasLocation" x="840.57971014492762" y="-262.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="KRZ-Wa-P7B">
-            <objects>
-                <viewController storyboardIdentifier="ViewController" id="TSv-uw-kLE" customClass="ViewController" customModule="CleanNetworkFramework" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rdp-7r-fjK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="VSi-Nv-aUH"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NYC-uV-JKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1580" y="-248"/>
-        </scene>
-        <!--GuestViewController-->
+        <!--Guest View Controller-->
         <scene sceneID="lb6-6D-WNC">
             <objects>
-                <viewController storyboardIdentifier="GuestViewController" title="GuestViewController" id="27s-BB-cgS" customClass="GuestViewController" customModule="CleanNetworkFramework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuestViewController" id="27s-BB-cgS" customClass="GuestViewController" customModule="CleanNetworkFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aO4-tJ-Ok5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.95282560586929321" green="0.95292764902114868" blue="0.95690959692001343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Sign In or Join now for free" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of6-hh-6qs">
+                                <rect key="frame" x="24" y="44" width="171" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sEN-yG-I5U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FD5-Sa-O8i">
+                                <rect key="frame" x="0.0" y="84" width="414" height="1"/>
+                                <color key="backgroundColor" red="0.8894231915473938" green="0.91365516185760498" blue="0.92612761259078979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="NgF-yz-9xn"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v69-on-nzX">
+                                <rect key="frame" x="346" y="44" width="39" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="K7w-Gp-Bpg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FD5-Sa-O8i" firstAttribute="leading" secondItem="aO4-tJ-Ok5" secondAttribute="leading" id="CmF-2m-Ern"/>
+                            <constraint firstAttribute="trailing" secondItem="FD5-Sa-O8i" secondAttribute="trailing" id="DNU-Pj-RwR"/>
+                            <constraint firstItem="aAZ-Dj-2NN" firstAttribute="trailing" secondItem="of6-hh-6qs" secondAttribute="trailing" constant="219" id="Rb9-Do-t8v"/>
+                            <constraint firstItem="of6-hh-6qs" firstAttribute="top" secondItem="aAZ-Dj-2NN" secondAttribute="top" id="em8-cO-qVD"/>
+                            <constraint firstItem="FD5-Sa-O8i" firstAttribute="top" secondItem="of6-hh-6qs" secondAttribute="bottom" id="jhh-P9-64g"/>
+                            <constraint firstItem="aAZ-Dj-2NN" firstAttribute="trailing" secondItem="v69-on-nzX" secondAttribute="trailing" constant="29" id="o2G-NC-apn"/>
+                            <constraint firstItem="of6-hh-6qs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aAZ-Dj-2NN" secondAttribute="leading" id="u8z-mK-H9A"/>
+                            <constraint firstItem="v69-on-nzX" firstAttribute="top" secondItem="aAZ-Dj-2NN" secondAttribute="top" id="vU3-rs-FUk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aAZ-Dj-2NN"/>
                     </view>
                 </viewController>

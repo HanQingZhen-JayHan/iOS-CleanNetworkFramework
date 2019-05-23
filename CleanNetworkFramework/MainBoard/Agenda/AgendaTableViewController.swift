@@ -10,7 +10,7 @@ import UIKit
 
 class AgendaTableViewController: UITableViewController {
     
-    private var itemList = ["Comic View","Guest List","Next"]
+    private var itemList = ["Comic View","Guest List","Test Collection View","Next"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,13 @@ class AgendaTableViewController: UITableViewController {
             
             break
         case 1:
-            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ComicListViewController") as? ComicListViewController
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "GuestViewController") as? GuestViewController
+            if vc != nil{
+                self.navigationController?.pushViewController(vc!, animated: true)
+            }
+            break
+        case 2:
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewController") as? ViewController
             if vc != nil{
                 self.navigationController?.pushViewController(vc!, animated: true)
             }
