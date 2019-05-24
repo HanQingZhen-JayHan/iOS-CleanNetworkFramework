@@ -38,7 +38,7 @@ class GuestViewController: UIViewController{
         return UniversityModel()
     }()
     
-    var universityList:[School] = []
+    var itemList:[School] = []
     
     override func loadView() {
         super.loadView()
@@ -125,7 +125,7 @@ class GuestViewController: UIViewController{
     }
     
     private func handleSuccess(_ respone: UniversityListResponse){
-        universityList += respone.getDataList()
+        self.itemList += respone.getDataList()
         self.collectionView.reloadData()
         self.refreshControl.endRefreshing()
     }
@@ -133,7 +133,20 @@ class GuestViewController: UIViewController{
     private func handleFailure(_ error: Error){
         print(error)
         self.refreshControl.endRefreshing()
+        showAlert(title: "Request Error", message: error.localizedDescription)
     }
+    
+    
+    //=======================================================
+    func showAlert(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+
 
 }
 
@@ -145,15 +158,15 @@ extension GuestViewController: UICollectionViewDataSource {
     
     //cell count
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.universityList.count
+        return self.itemList.count
     }
     
     
     //cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: PostCell.identifier, for: indexPath) as! PostCell
-        
-        cell.textLabel.text = String(indexPath.row+1)
+        let item = self.itemList[indexPath.row]
+        cell.textLabel.text = "\(indexPath.row+1) \(item.name)"
         
         return cell
     }
@@ -187,9 +200,8 @@ extension GuestViewController: UICollectionViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if(self.refreshControl.isRefreshing){
             //do some refresh action here
-            //self.refreshControl.endRefreshing()
             self.currentPage = 0
-            self.universityList.removeAll()
+            self.itemList.removeAll()
             self.getUniversityList()
         }else {
             let scrollViewHeight = scrollView.frame.size.height
