@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct School{
+struct School : Codable{
     let id: String
     let name: String
     let coverImage: String

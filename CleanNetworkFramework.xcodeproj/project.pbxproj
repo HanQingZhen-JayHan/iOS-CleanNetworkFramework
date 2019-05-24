@@ -27,6 +27,10 @@
 		E329DE782297376200AD3607 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329DE772297376200AD3607 /* Cell.swift */; };
 		E329DE7A2297379500AD3607 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329DE792297379500AD3607 /* ViewController.swift */; };
 		E329DE7D22975E8500AD3607 /* LoadMoreIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329DE7C22975E8500AD3607 /* LoadMoreIndicator.swift */; };
+		E329DE7F229767CA00AD3607 /* UniversityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329DE7E229767CA00AD3607 /* UniversityModel.swift */; };
+		E329DE81229774A200AD3607 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329DE80229774A200AD3607 /* Page.swift */; };
+		E329DE83229774F300AD3607 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329DE82229774F300AD3607 /* BaseResponse.swift */; };
+		E329DE8522977C9400AD3607 /* UniversityListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E329DE8422977C9400AD3607 /* UniversityListResponse.swift */; };
 		E3421B3E2295F23300120F6D /* GuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3421B3D2295F23300120F6D /* GuestViewController.swift */; };
 		E3421B402295F25E00120F6D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3421B3F2295F25E00120F6D /* PostCell.swift */; };
 		E3B83B9E22949E36003BF0C4 /* AgendaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B83B9D22949E36003BF0C4 /* AgendaTableViewController.swift */; };
@@ -58,6 +62,10 @@
 		E329DE772297376200AD3607 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		E329DE792297379500AD3607 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E329DE7C22975E8500AD3607 /* LoadMoreIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreIndicator.swift; sourceTree = "<group>"; };
+		E329DE7E229767CA00AD3607 /* UniversityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModel.swift; sourceTree = "<group>"; };
+		E329DE80229774A200AD3607 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		E329DE82229774F300AD3607 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		E329DE8422977C9400AD3607 /* UniversityListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListResponse.swift; sourceTree = "<group>"; };
 		E3421B3D2295F23300120F6D /* GuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestViewController.swift; sourceTree = "<group>"; };
 		E3421B3F2295F25E00120F6D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		E3B83B9D22949E36003BF0C4 /* AgendaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTableViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				E31C85EC2283E1C60055A9B0 /* ComicModel.swift */,
+				E329DE7E229767CA00AD3607 /* UniversityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +172,7 @@
 			children = (
 				E31C85F02283E4590055A9B0 /* Comic.swift */,
 				E329DE7522960FAE00AD3607 /* School.swift */,
+				E329DE80229774A200AD3607 /* Page.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -170,6 +180,8 @@
 		E31C85EB2283E1280055A9B0 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				E329DE82229774F300AD3607 /* BaseResponse.swift */,
+				E329DE8422977C9400AD3607 /* UniversityListResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -367,11 +379,13 @@
 				E31C85E52283D9530055A9B0 /* AlamofireResult.swift in Sources */,
 				E31C85E92283DDE50055A9B0 /* MyAppAPI.swift in Sources */,
 				E31C85ED2283E1C60055A9B0 /* ComicModel.swift in Sources */,
+				E329DE81229774A200AD3607 /* Page.swift in Sources */,
 				E3B83BA02294A191003BF0C4 /* TableViewCell.swift in Sources */,
 				E329DE782297376200AD3607 /* Cell.swift in Sources */,
 				E31C85E32283D6330055A9B0 /* Resource.swift in Sources */,
 				E3B83B9E22949E36003BF0C4 /* AgendaTableViewController.swift in Sources */,
 				E31C85CC2283D1160055A9B0 /* ComicListViewController.swift in Sources */,
+				E329DE8522977C9400AD3607 /* UniversityListResponse.swift in Sources */,
 				E31C85F522874ADB0055A9B0 /* RepositoryFactory.swift in Sources */,
 				E31C85CA2283D1160055A9B0 /* AppDelegate.swift in Sources */,
 				E31C85F32283E6020055A9B0 /* CustomError.swift in Sources */,
@@ -380,7 +394,9 @@
 				E31C85E72283DAC20055A9B0 /* APIClient.swift in Sources */,
 				E329DE7A2297379500AD3607 /* ViewController.swift in Sources */,
 				E329DE7D22975E8500AD3607 /* LoadMoreIndicator.swift in Sources */,
+				E329DE7F229767CA00AD3607 /* UniversityModel.swift in Sources */,
 				E3421B402295F25E00120F6D /* PostCell.swift in Sources */,
+				E329DE83229774F300AD3607 /* BaseResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

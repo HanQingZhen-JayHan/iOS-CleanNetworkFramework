@@ -34,6 +34,11 @@ class GuestViewController: UIViewController{
     
     //data
     var data: [Int] = Array(0..<10)
+    lazy var universityModel:UniversityModel = {
+        return UniversityModel()
+    }()
+    
+    var universityList:[School] = []
     
     override func loadView() {
         super.loadView()
@@ -52,7 +57,7 @@ class GuestViewController: UIViewController{
         self.navigationItem.title = "Guest"
         // Do any additional setup after loading the view.
         configCollectionView()
-        
+        getUniversityList()
     }
     
     private func configCollectionView(){
@@ -106,6 +111,29 @@ class GuestViewController: UIViewController{
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //=================================================================
+    private func getUniversityList(){
+        universityModel.getUniversityList(currentPage){[unowned self](result) in
+            switch result {
+            case .success(let universityList):
+                self.handleSuccess(universityList)
+            case .failure(let error):
+                self.handleFailure(error)
+            }
+        }
+    }
+    
+    private func handleSuccess(_ respone: UniversityListResponse){
+        universityList += respone.getDataList()
+        self.collectionView.reloadData()
+        self.refreshControl.endRefreshing()
+    }
+    
+    private func handleFailure(_ error: Error){
+        print(error)
+        self.refreshControl.endRefreshing()
+    }
 
 }
 
@@ -117,7 +145,7 @@ extension GuestViewController: UICollectionViewDataSource {
     
     //cell count
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.data.count
+        return self.universityList.count
     }
     
     
@@ -160,14 +188,18 @@ extension GuestViewController: UICollectionViewDelegate {
         if(self.refreshControl.isRefreshing){
             //do some refresh action here
             //self.refreshControl.endRefreshing()
+            self.currentPage = 0
+            self.universityList.removeAll()
+            self.getUniversityList()
         }else {
             let scrollViewHeight = scrollView.frame.size.height
             let scrollViewContentHeight = scrollView.contentSize.height
             let scrollViewOffset = scrollView.contentOffset.y
             
             if (scrollViewHeight + scrollViewOffset >= scrollViewContentHeight - loadMoreIndicatorHeight) && hasMore && !isFetching {
-                
                 //do load more action here
+                self.currentPage += 1
+                self.getUniversityList()
             }
         }
     }
